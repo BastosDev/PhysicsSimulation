@@ -6,13 +6,14 @@ A Python simulation of a charged particle (electron) moving through a magnetic f
 
 The simulation is based on the Lorentz Force equation for a particle in a magnetic field:
 
-$$\mathbf{F} = q(\mathbf{v} \times \mathbf{B})$$
+$$\mathbf{F} = q(\mathbf{E} + \mathbf{v} \times \mathbf{B})$$
 
 Where:
 - **F**: Magnetic Force (Vector)
 - **q**: Electric Charge
 - **v**: Velocity Vector
 - **B**: Magnetic Field Vector
+- **E**: Electric Field
 
 The cross product ($\times$) results in a force perpendicular to both velocity and magnetic field, creating a helical (spiral) trajectory.
 

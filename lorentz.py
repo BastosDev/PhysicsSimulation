@@ -19,6 +19,9 @@ velocity = np.array([1.0, 0.0, 1.0])
 # Initial velocity of the particle
 # The velocity is pointing in the x and z direction(moving in the xz plane)
 B = np.array([0.0, 0.0, 5.0])
+# Magnetic field pointing in the z direction
+E = np.array([0.0, 0.1, 0.0])
+# Electric Field pointing in the y direction
 
 print ("Vectors are ready")
 print (f"Initial velocity: {velocity}")
@@ -30,7 +33,7 @@ print (f"Initial Lorentz force: {initial_F}")
 print ("Starting simulation...")
 
 for i in range(steps):
-    F = q * np.cross(velocity, B)
+    F = q * (E + np.cross(velocity, B))
     # Calculating the Lorentz force at each time step
     acc = F / m
     # Calculating the acceleration using Newton's second law (F = m * a)
@@ -52,7 +55,7 @@ ax.plot(hist_x, hist_y, hist_z, label="Electron", color="blue")
 ax.set_xlabel("X-axis")
 ax.set_ylabel("Y-axis")
 ax.set_zlabel("Z-axis")
-ax.set_title(f"Lorentz Force Simulation (v={velocity}, B={B})")
+ax.set_title(f"Lorentz Force Simulation (v={velocity}, B={B}, E={E})")
 # Setting the labels and title of the graph
 ax.legend()
 # Adding a legend to the graph
