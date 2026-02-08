@@ -25,8 +25,6 @@ pip install -r requirements.txt
 
 2. Run the simulation
 
-python lorentz_sim.py
-
 ## 🛠️ Technologies
 
 - Python 3
